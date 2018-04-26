@@ -1,0 +1,112 @@
+{{ define "layout" }}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>DataPenetration</title>
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="/assets/css/bootstrap.min.css" type="text/css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <!-- <link href="/cssjs/css/frontpage.css" type="text/css" rel="stylesheet"> -->
+
+    <!-- Custom styles for this template -->
+    <link href="/cssjs/css/dashboard.css" rel="stylesheet">
+    <link href="/cssjs/css/news.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <br>
+		<div class="container">
+		<!-- Nav tabs -->
+		  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+		    <a class="navbar-brand" href="/">DataPenetration</a>
+		    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+		      <!-- <ul class="navbar-nav mr-auto mt-2 mt-lg-0"> -->
+	      	<ul class="nav navbar-nav nav-pills mr-auto mt-2 mt-lg-0" id="pills-tab" role="tablist">
+		      	<li class="nav-item">
+					    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">News</a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Dashboard</a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Settings</a>
+					  </li>
+				  </ul>
+				  <input class="form-control w-50" type="search" placeholder="Search" aria-label="Search">
+		     <!--  </ul> -->
+		      <!-- this form must call /authenticate -->
+		      <form class="form-inline my-2 my-lg-0" action="/authenticate" method="post">
+		        <a type="submit" class="btn" href="/logout">Logout</a>
+		      </form>
+		    </div>
+		  </nav>
+		</div>
+		<div class="container">
+			<div class="tab-content" id="pills-tabContent">
+			  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">{{ template "news" . }}</div>
+			  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">{{ template "dashboard" . }}</div>
+			  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">{{ template "settings" . }}</div>
+			</div>
+		</div>
+
+
+    <!-- CDN javascript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+    <!-- local javascript -->
+    <!-- <script type="text/javascript" src="/cssjs/js/publicpage.js"></script> -->
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace()
+    </script>
+
+    <!-- Graphs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script>
+      var ctx = document.getElementById("myChart");
+      var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          datasets: [{
+            data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
+            lineTension: 0,
+            backgroundColor: 'transparent',
+            borderColor: '#007bff',
+            borderWidth: 4,
+            pointBackgroundColor: '#007bff'
+          }]
+        },
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: false
+              }
+            }]
+          },
+          legend: {
+            display: false,
+          }
+        }
+      });
+    </script>
+
+  </body>
+</html>
+
+{{ end }}
