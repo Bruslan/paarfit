@@ -1,5 +1,4 @@
 INFO 2018/04/26 15:55:05 utilities.go:155: Failed to get cookie <nil>
-<<<<<<< HEAD
 INFO 2018/04/30 09:50:07 utilities.go:158: Key may not be empty Cannot find email
 INFO 2018/04/30 09:50:45 utilities.go:158: Failed to get cookie <nil>
 INFO 2018/04/30 10:00:33 utilities.go:158: Failed to get cookie <nil>
@@ -11,7 +10,3 @@ INFO 2018/04/30 14:41:12 utilities.go:158: Failed to get cookie <nil>
 INFO 2018/04/30 14:48:16 utilities.go:158: Failed to get cookie <nil>
 INFO 2018/04/30 15:07:38 utilities.go:158: Failed to get cookie <nil>
 INFO 2018/04/30 16:04:48 utilities.go:158: Failed to get cookie <nil>
-=======
-INFO 2018/04/26 14:23:27 utilities.go:155: gocql: unable to create session: unable to discover protocol version: dial tcp 127.0.0.1:9042: connect: connection refused Cannot find email
-INFO 2018/04/26 14:23:43 utilities.go:155: gocql: unable to create session: unable to discover protocol version: dial tcp 127.0.0.1:9042: connect: connection refused Cannot find email
->>>>>>> 6199c3524fb6071058198b38fbb4042bbae0ff41

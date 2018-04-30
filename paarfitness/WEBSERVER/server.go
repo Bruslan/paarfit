@@ -37,9 +37,5 @@ func main() {
 	}
 	fmt.Println(services.Config.Address + " and " + services.Config.AddressSSL)
 	http2.ConfigureServer(&server, &http2.Server{})
-
 	log.Fatal(server.ListenAndServeTLS(services.Config.Encryptcl1, services.Config.Encryptcl2))
-
-	log.Fatal(server.ListenAndServeTLS("/etc/letsencrypt/live/datapenetration.de/fullchain.pem", "/etc/letsencrypt/live/datapenetration.de/privkey.pem"))
-
 }
