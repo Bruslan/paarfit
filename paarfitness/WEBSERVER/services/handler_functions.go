@@ -41,7 +41,11 @@ func Bruse(writer http.ResponseWriter, request *http.Request) {
 // redirect to HTTPS:
 func Redirect(writer http.ResponseWriter, request *http.Request) {
 	host := strings.Split(request.Host, ":")[0]
+
 	http.Redirect(writer, request, "https://"+host+ Config.AddressSSL, http.StatusMovedPermanently)
+
+	http.Redirect(writer, request, "https://"+host+":443", http.StatusMovedPermanently)
+
 }
 
 // Terms and Conditions, Privacy, Third Party, GET /terms
