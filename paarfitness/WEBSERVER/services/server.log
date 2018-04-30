@@ -1,1 +1,12 @@
 INFO 2018/04/26 15:55:05 utilities.go:155: Failed to get cookie <nil>
+INFO 2018/04/30 09:50:07 utilities.go:158: Key may not be empty Cannot find email
+INFO 2018/04/30 09:50:45 utilities.go:158: Failed to get cookie <nil>
+INFO 2018/04/30 10:00:33 utilities.go:158: Failed to get cookie <nil>
+INFO 2018/04/30 10:08:01 utilities.go:158: Failed to get cookie <nil>
+INFO 2018/04/30 14:03:21 utilities.go:158: Failed to get cookie <nil>
+INFO 2018/04/30 14:11:56 utilities.go:158: Failed to get cookie <nil>
+INFO 2018/04/30 14:21:12 utilities.go:158: Failed to get cookie <nil>
+INFO 2018/04/30 14:41:12 utilities.go:158: Failed to get cookie <nil>
+INFO 2018/04/30 14:48:16 utilities.go:158: Failed to get cookie <nil>
+INFO 2018/04/30 15:07:38 utilities.go:158: Failed to get cookie <nil>
+INFO 2018/04/30 16:04:48 utilities.go:158: Failed to get cookie <nil>

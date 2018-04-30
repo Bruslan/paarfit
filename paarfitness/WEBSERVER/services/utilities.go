@@ -40,6 +40,9 @@ type Configuration struct {
 	ReadTimeout  int64
 	WriteTimeout int64
 	Static       string
+	Encryptcl1 	 string
+	Encryptcl2	 string
+
 }
 
 var logger *log.Logger

@@ -1,6 +1,8 @@
 {
   "Address"			: "0.0.0.0:8900",
-  "AddressSSL"		: "0.0.0.0:8901",
+  "AddressSSL"		: ":8901",
   "Redirect"		: "https://0.0.0.0:8901",
-  "Static" 			: "cssjs"
+  "Static" 			: "cssjs",
+  "Encryptcl1" 		: "letsencrypt/cert.pem",
+  "Encryptcl2"		: "letsencrypt/key.pem"
 }
